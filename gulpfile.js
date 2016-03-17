@@ -107,12 +107,13 @@ gulp.task('watch', function() {
  * Creates a live-server instance running out of
  * the dist folder. 
  */
-gulp.task('serve', ['default', 'watch'], function() {
-  var server = liveserver.static('dist', 3001); 
+gulp.task('serve', ['watch'], function() {
+  var server = liveserver.static('dist'); 
   server.start();
 
   //use gulp.watch to trigger server actions(notify, start or stop) 
   gulp.watch(['dist/**'], function (file) {
+    util.log("reloading Via dist..");
     server.notify.apply(server, [file]);
   });
 });

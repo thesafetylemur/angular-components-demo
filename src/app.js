@@ -18,7 +18,6 @@
     });
 
     function HomeController() {
-      console.log('Initializing HomeController..!');
       var homeCtrl = this;
       homeCtrl.greeting = 'Hello World!';
     }
