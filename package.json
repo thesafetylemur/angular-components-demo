@@ -1,0 +1,21 @@
+{
+  "name": "angular-best-practices",
+  "version": "1.0.0",
+  "description": "Demo app to highlight some of the best practices for Angular v1.5.",
+  "main": "index.html",
+  "scripts": {
+    "test": "karma start test/karma.conf.js"
+  },
+  "author": "chq-joels",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0"
+  }
+}

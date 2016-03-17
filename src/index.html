@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My angular app</title>
+</head>
+<body ng-app="myApp">
+  
+  <h1>My cool angular app!</h1>
+  <div>
+    <a ng-href="#/home">Go Home</a>
+    <a ng-href="#/cool">Cool</a>
+  </div>
+  <ng-view> 
+    
+  </ng-view>
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="cool/cool.js"></script>
+</body>
+</html>
