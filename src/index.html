@@ -14,15 +14,20 @@
     
   </ng-view>
 
-  
+  <!-- Note that jquery is listed before Angular. When Angular is  
+       bootstrapped, if it finds jQuery already, it will use that 
+       instead of it's own built-in version of jQLite... -->
   <!-- build:js vendor/js/vendor.min.js -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/angular/angular.js"></script>
   <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../bower_components/randomcolor/randomColor.js"></script>
   <!--/build--> 
+
 
   <!-- build:js assets/js/main.min.js -->
   <script src="app.js"></script>
+  <script src="home/home.js"></script>
   <script src="cool/cool.js"></script>
   <!--/build--> 
 </body>

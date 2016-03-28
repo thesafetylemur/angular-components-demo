@@ -51,8 +51,7 @@ gulp.task('scripts', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(gulp.dest('dist/assets/js'))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(gulp.dest('dist/assets/js'));
 });
 
 /**
