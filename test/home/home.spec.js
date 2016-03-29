@@ -1,11 +1,11 @@
-describe('The myApp module', function() {
-  beforeEach(module('myApp'));
+describe('The home module', function() {
+  beforeEach(module('home'));
   describe('home controller', function () {
 
     var homeController;
     beforeEach(
       inject(function($controller) {
-        homeController = $controller('HomeController');
+        homeController = $controller('HomeCtrl');
       })
     );
 
@@ -14,4 +14,4 @@ describe('The myApp module', function() {
     });
 
   });
-})
+});

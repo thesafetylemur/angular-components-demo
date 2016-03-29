@@ -11,14 +11,14 @@
           redirectTo: '/home'
         });
     })
-    .controller('HomeController', HomeController)
+    .controller('HomeCtrl', HomeCtrl)
     .component('home', {
       templateUrl: 'home/home.html',
-      controller: 'HomeController',
+      controller: 'HomeCtrl',
       controllerAs: 'hc'
     });
 
-    function HomeController() {
+    function HomeCtrl() {
       var homeCtrl = this;
       homeCtrl.greeting = 'Hello World!';
     }

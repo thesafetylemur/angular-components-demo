@@ -20,7 +20,8 @@ var
  */
 gulp.task('clean', function() {
   return del([
-    'dist'
+    'dist',
+    'test/coverage'
   ]);
 });
 
@@ -68,6 +69,19 @@ gulp.task('processhtml', function() {
 }); 
 
 /**
+ * Replaces the explicit dependencies in the html
+ * files with the concatenated/minified versions 
+ * and moves the html to the dist folder.
+ */
+gulp.task('processstyles', function() {
+  // process html; replace <!-- build:js --> sections 
+  // with concat/minified versions
+  return gulp.src('./src/**/*.css')
+    // TODO: compile/minify/combine css here!
+    .pipe(gulp.dest('dist'));
+}); 
+
+/**
  * Build the vendor components. Takes the bower
  * javascript files, concatenates and minifies
  * them, then places them in the dist folder.
@@ -100,6 +114,9 @@ gulp.task('watch', function() {
 
   // Watch .html files
   gulp.watch('src/**/*.html', ['processhtml']);
+
+  // Watch .css files
+  gulp.watch('src/**/*.css', ['processstyles']);
 });
 
 /**
@@ -125,10 +142,12 @@ gulp.task('serve', ['watch'], function() {
  * runs the Karma tests then compiles/builds the
  * application scripts, html and vendor dependencies.
  */
-gulp.task('default', ['clean', 'karma'], function() {
+gulp.task('default', ['clean'], function() {
   gulp.start(
     'scripts',
     'processhtml',
-    'vendor'
+    'processstyles',
+    'vendor',
+    'karma'
   );
 });

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>My angular app</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body ng-app="myApp">
   
@@ -9,6 +10,7 @@
   <div>
     <a ng-href="#/home">Go Home</a>
     <a ng-href="#/cool">Cool</a>
+    <a ng-href="#/controllerAs">Controller As</a>
   </div>
   <ng-view> 
     
@@ -29,6 +31,9 @@
   <script src="app.js"></script>
   <script src="home/home.js"></script>
   <script src="cool/cool.js"></script>
+  <script src="controllerAs/controllerAs.js"></script>
+  <script src="shared/directives/coolDirective.js"></script>
+  <script src="shared/services/coolService.js"></script>
   <!--/build--> 
 </body>
 </html>

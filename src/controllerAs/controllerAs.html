@@ -1,0 +1,21 @@
+<div class="controller-as first" ng-controller="FirstCtrl as first">
+	<ul>
+		<li><span ng-bind="first.myValue"></span></li>
+		<li><span ng-bind="second.myValue"></span></li> <!-- of course, this doesn't work... -->
+		<li><span ng-bind="third.myValue"></span></li> <!-- of course, this doesn't work... -->
+	</ul>
+	<div class="controller-as second" ng-controller="SecondCtrl as second">
+		<ul>
+			<li><span ng-bind="first.myValue"></span></li>
+			<li><span ng-bind="second.myValue"></span></li>
+			<li><span ng-bind="third.myValue"></span></li> <!-- of course, this doesn't work... -->
+		</ul>
+		<div class="controller-as third" ng-controller="ThirdCtrl as third">
+			<ul>
+				<li><span ng-bind="first.myValue"></span></li>
+				<li><span ng-bind="second.myValue"></span></li>
+				<li><span ng-bind="third.myValue"></span></li>
+			</ul>
+		</div>
+	</div>
+</div>

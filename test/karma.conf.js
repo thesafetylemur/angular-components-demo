@@ -8,6 +8,7 @@ module.exports = function(config) {
       '../bower_components/angular/angular.js',
       '../bower_components/angular-route/angular-route.js',
       '../bower_components/angular-mocks/angular-mocks.js',
+      '../bower_components/randomcolor/randomColor.js',
       '../src/**/*.js',
       '**/*.js'
     ],
@@ -17,9 +18,17 @@ module.exports = function(config) {
     plugins : [
       'karma-jasmine', 
       'karma-phantomjs-launcher',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-coverage'
     ],
-    reporters: ['progress'],
+    preprocessors: {
+      '../src/**/*.js': ['coverage']
+    },
+    reporters: ['progress','coverage'],
+    coverageReporter : {
+      type : 'html',
+      dir : 'coverage/'
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

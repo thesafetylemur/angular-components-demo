@@ -1,0 +1,29 @@
+.controller-as {
+	padding: 10px;
+}
+
+.controller-as.first {
+	background-color: #BCFFBA;
+}
+
+.controller-as.second {
+	background-color: #FB74EB;
+}
+
+.controller-as.third {
+	background-color: #C17AD1;
+}
+
+li {
+  -webkit-transition: font-size 0.3s ease;
+  -moz-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  -ms-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
+  display: block;
+  width: 200px;
+}
+
+li:hover {
+  font-size: 30px;
+}
