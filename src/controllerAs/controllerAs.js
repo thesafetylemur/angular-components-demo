@@ -3,29 +3,31 @@
 
   angular
     .module('controllerAs', ['ngRoute'])
-    .config(function($routeProvider) {
-      // TODO: build out as component :)
-      $routeProvider
-        .when('/controllerAs', {
-          templateUrl: 'controllerAs/controllerAs.html'
-        });
-    })
+    .config(RouteConfig)
     .controller('FirstCtrl', FirstCtrl)
     .controller('SecondCtrl', SecondCtrl)
     .controller('ThirdCtrl', ThirdCtrl);
 
-    function FirstCtrl() {
-      var first = this;
-      first.myValue = 'First value';
-    }
+  function RouteConfig($routeProvider) {
+    // TODO: build out as component :)
+    $routeProvider
+      .when('/controllerAs', {
+        templateUrl: 'controllerAs/controllerAs.html'
+      });
+  }
 
-    function SecondCtrl() {
-      var second = this;
-      second.myValue = 'Second value';
-    }
+  function FirstCtrl() {
+    var first = this;
+    first.myValue = 'First value';
+  }
 
-    function ThirdCtrl() {
-      var third = this;
-      third.myValue = 'Third value';
-    }
+  function SecondCtrl() {
+    var second = this;
+    second.myValue = 'Second value';
+  }
+
+  function ThirdCtrl() {
+    var third = this;
+    third.myValue = 'Third value';
+  }
 })(window.angular);

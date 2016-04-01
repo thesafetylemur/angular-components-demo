@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "serve": "gulp serve",
-    "test": "gulp karma"
+    "test": "gulp karma",
+    "karma": "karma start test/karma.conf.js"
   },
   "author": "chq-joels",
   "license": "ISC",
